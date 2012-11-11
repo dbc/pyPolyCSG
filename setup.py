@@ -41,9 +41,9 @@ libraries      = [ ]
 # ==========================================================================
 boost_defines        = [ ]
 boost_compiler_flags = [ ]
-boost_include_dirs   = [ '/usr/local/include' ]
-boost_library_dirs   = [ '/usr/local/lib' ]
-boost_libraries      = [ 'boost_python-mt' ]
+boost_include_dirs   = [ '/usr/include' ]
+boost_library_dirs   = [ '/usr/lib' ]
+boost_libraries      = [ 'boost_python-mt-py27' ]
 
 # ==========================================================================
 # Setup for Carve ==========================================================
@@ -61,8 +61,8 @@ carve_libraries      = [ 'carve' ]
 use_cgal = False
 cgal_defines        = [ ('CSG_USE_CGAL','1') ]
 cgal_compiler_flags = [ '-frounding-math' ]
-cgal_include_paths  = [ '/usr/local/include' ]
-cgal_library_paths  = [ '/usr/local/lib' ]
+cgal_include_paths  = [ '/usr/include' ]
+cgal_library_paths  = [ '/usr/lib' ]
 cgal_libraries      = [ 'cgal' ]
 
 # ==========================================================================
@@ -71,8 +71,8 @@ cgal_libraries      = [ 'cgal' ]
 use_vtk = False
 vtk_defines        = [ ('CSG_USE_VTK','1') ]
 vtk_compiler_flags = []
-vtk_include_paths  = [ '/usr/local/include/vtk-5.8' ]
-vtk_library_paths  = [ '/usr/local/lib/vtk-5.8' ]
+vtk_include_paths  = [ '/usr/include/vtk-5.8' ]
+vtk_library_paths  = [ '/usr/lib/vtk-5.8' ]
 vtk_libraries = [ 'vtkalglib', 'vtkCharts', 'vtkCommon', 'vtkGraphics', 'vtkDICOMParser', 'vtkexoIIc', 'vtkexpat', 'vtkFiltering', 'vtkfreetype', 'vtkftgl', 'vtkGenericFiltering', 'vtkGeovis', 'vtkHybrid', 'vtkImaging', 'vtkInfovis', 'vtkIO', 'vtklibxml2', 'vtkNetCDF', 'vtkproj4', 'vtkRendering', 'vtksys', 'vtkverdict', 'vtkViews', 'vtkVolumeRendering', 'vtkWidgets', 'vtkzlib' ]
 
 # ==========================================================================

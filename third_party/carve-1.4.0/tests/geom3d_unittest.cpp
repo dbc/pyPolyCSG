@@ -31,11 +31,24 @@ using namespace carve::geom3d;
 
 #include BOOST_INCLUDE(random.hpp)
 
+#if __APPLE__
 // OSX only.
 uint32_t getseed() {
   srandomdev();
   return random();
 }
+#else
+uint32_t getseed() {
+  FILE *f;
+  unsigned long sysseed;
+  f = fopen("/dev/random","r");
+  // FIXME: Lack of error handling is cheezy.
+  fread(&sysseed, sizeof(unsigned long), 1, f);
+  fclose(f);
+  srandom(sysseed);
+  return random();
+}
+#endif
 
 boost::mt19937 rng(getseed());
 boost::uniform_on_sphere<double> distrib(3);
